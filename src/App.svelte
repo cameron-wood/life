@@ -30,17 +30,21 @@
   <svg width="{52*15}" height="{expectancy*15}">
     {#each {length: expectancy} as _, year}
     {#each {length: 52} as _, week}
+      <!-- <circle cx="{week*15+5}" cy="{year*15+5}" r="5" stroke="darkgrey" fill={fill(year, week, diffWeeks)}/> -->
       <rect x="{week*15}" y="{year*15}" width="10" height="10" stroke="darkgrey" fill={fill(year, week, diffWeeks)}/>
     {/each}
     {/each}
   </svg>
+  <footer>
+    <p>Inspired by Tim Urban's <a href="https://waitbutwhy.com/2014/05/life-weeks.html" target="_blank">Your Life in Weeks - Wait But Why</a></p>
+  </footer>
 </main>
 
 <style>
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
+		max-width: 800px;
 		margin: 0 auto;
 	}
 
